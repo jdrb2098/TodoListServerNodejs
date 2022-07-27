@@ -55,7 +55,7 @@ const update = (req, res) => {
     const data = req.body
     if (data.task && data.description && data.createtAt && data.isDone) {
         const response = editTodo(id, data)
-        res.status(201).json({ message: "User edited succesfully", data: response })
+        res.status(201).json({ message: "Todo edited succesfully", data: response })
     }
     else {
         res.status(400).json({ message: "Invalid Arguments" })
@@ -66,5 +66,6 @@ module.exports = {
     getAll,
     getById,
     deleteById,
-    update, create
+    update, 
+    create
 }
