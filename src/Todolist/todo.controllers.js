@@ -3,7 +3,7 @@ const todoListDB = [
       id: 1,
       task: "",
       isDone: false,
-      createdAt: (new Date()).toLocaleDateString(),
+      createdAt: "",
       description: "",
     },
   ];
@@ -40,7 +40,7 @@ const todoListDB = [
         createdAt: todoObj.createdAt,
     };
     todoListDB.push(newTodo);
-    return newUser;
+    return newTodo;
   };
 
   const deleteTodo = (id) => {
@@ -58,7 +58,7 @@ const todoListDB = [
       todoListDB[index] = data
       return todoListDB[index]
     } else {
-      createUser(data)
+      createTodoList(data)
       return todoListDB.at(-1)
     }
   }
